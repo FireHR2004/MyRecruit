@@ -22,44 +22,47 @@
     @auth
         <div id="app" class="d-flex">
             <div class="d-flex flex-column flex-shrink-0 p-3 bg-dark-navy" style="width: 280px;">
-                <a href="/"
-                    class="d-flex align-items-center mb-3 mb-md-0 me-md-auto py-2 text-white text-decoration-none">
+                <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
                     <span class="fs-4">MyRecruit</span>
                 </a>
                 <ul class="nav nav-pills flex-column mb-auto">
                     <li class="nav-item">
-                        <a href="#" class="nav-link d-flex align-items-center gap-2 text-white active"
+                        <a href="#" class="nav-link d-flex align-items-center gap-2 text-white active mt-4"
                             aria-current="page">
                             @include('icons/home')
                             Home
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link d-flex align-items-center gap-2 text-white" aria-current="page">
+                        <a href="#" class="nav-link d-flex align-items-center gap-2 text-white mt-4"
+                            aria-current="page">
                             @include('icons/home')
                             Home
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link d-flex align-items-center gap-2 text-white" aria-current="page">
+                        <a href="#" class="nav-link d-flex align-items-center gap-2 text-white mt-4"
+                            aria-current="page">
                             @include('icons/home')
                             Home
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link d-flex align-items-center gap-2 text-white" aria-current="page">
+                        <a href="#" class="nav-link d-flex align-items-center gap-2 text-white mt-4"
+                            aria-current="page">
                             @include('icons/home')
                             Home
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link d-flex align-items-center gap-2 text-white" aria-current="page">
+                        <a href="#" class="nav-link d-flex align-items-center gap-2 text-white mt-4"
+                            aria-current="page">
                             @include('icons/home')
                             Home
                         </a>
                     </li>
                 </ul>
-                {{-- <hr>
+                <hr>
                 <div class="dropdown">
                     <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
                         data-bs-toggle="dropdown" aria-expanded="false">
@@ -76,7 +79,7 @@
                         </li>
                         <li><a class="dropdown-item" href="#">Sign out</a></li>
                     </ul>
-                </div> --}}
+                </div>
             </div>
             @endif
             <div class="w-full">
@@ -134,9 +137,41 @@
                         </div>
                     </nav>
 
-                    <main class="py-4">
+                    <main class="py-3 container">
                         @yield('content')
                     </main>
+
+                    @guest
+                        <div class="shadow-lg">
+                            <div class="py-3 container">
+                                <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+                                    <div class="col-md-4 d-flex align-items-center">
+                                        <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+                                            <svg class="bi" width="30" height="24">
+                                                <use xlink:href="#bootstrap"></use>
+                                            </svg>
+                                        </a>
+                                        <span class="mb-3 mb-md-0 text-body-secondary">© 2024 Company, Inc</span>
+                                    </div>
+
+                                    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                                        <li class="ms-3"><a class="text-body-secondary" href="#">
+                                                @include('icons/x')
+                                            </a>
+                                        </li>
+                                        <li class="ms-3"><a class="text-body-secondary" href="#">
+                                                @include('icons/instagram')
+                                            </a>
+                                        </li>
+                                        <li class="ms-3"><a class="text-body-secondary" href="#">
+                                                @include('icons/facebook')
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </footer>
+                            </div>
+                        </div>
+                    @endguest
                 </div>
             </div>
         </body>
