@@ -20,14 +20,14 @@
 
 <body>
     @auth
-        <div id="app" class="d-flex">
+        <div id="app" class="d-flex side-bar">
             <div class="d-flex flex-column flex-shrink-0 p-3 bg-dark-navy" style="width: 280px;">
-                <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                <a href="/home" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
                     <span class="fs-4">MyRecruit</span>
                 </a>
                 <ul class="nav nav-pills flex-column mb-auto">
                     <li class="nav-item">
-                        <a href="#" class="nav-link d-flex align-items-center gap-2 text-white active mt-4"
+                        <a href="/home  " class="nav-link d-flex align-items-center gap-2 text-white active mt-4"
                             aria-current="page">
                             @include('icons/home')
                             Home
@@ -64,20 +64,21 @@
                 </ul>
                 <hr>
                 <div class="dropdown">
-                    <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="https://github.com/mdo.png" alt="" width="32" height="32"
-                            class="rounded-circle me-2">
-                        <strong>mdo</strong>
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
-                        <li><a class="dropdown-item" href="#">New project...</a></li>
-                        <li><a class="dropdown-item" href="#">Settings</a></li>
-                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <ul class="nav nav-pills flex-column mb-auto">
                         <li>
-                            <hr class="dropdown-divider">
+                            <a href="#" class="nav-link d-flex align-items-center gap-2 text-white mt-4"
+                                aria-current="page">
+                                @include('icons/user-group')
+                                User Management
+                            </a>
                         </li>
-                        <li><a class="dropdown-item" href="#">Sign out</a></li>
+                        <li>
+                            <a href="#" class="nav-link d-flex align-items-center gap-2 text-white mt-4"
+                                aria-current="page">
+                                @include('icons/user')
+                                Profile
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -137,7 +138,7 @@
                         </div>
                     </nav>
 
-                    <main class="py-3 container">
+                    <main class="py-3 container content">
                         @yield('content')
                     </main>
 
