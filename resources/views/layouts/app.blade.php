@@ -34,17 +34,17 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link d-flex align-items-center gap-2 text-white mt-4"
+                        <a href="/criteria" class="nav-link d-flex align-items-center gap-2 text-white mt-4"
                             aria-current="page">
                             @include('icons/home')
-                            Home
+                            Kriteria
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link d-flex align-items-center gap-2 text-white mt-4"
+                        <a href="/subcriteria" class="nav-link d-flex align-items-center gap-2 text-white mt-4"
                             aria-current="page">
                             @include('icons/home')
-                            Home
+                            Sub Kriteria
                         </a>
                     </li>
                     <li>
