@@ -16,16 +16,16 @@
             </tr>
         </thead>
         <tbody>
-            @foreach($criteria as $criterion)
+            @foreach($kriteria as $data_kriteria)
             <tr>
                 <td>{{ $loop->iteration }}</td>
-                <td>{{ $criterion->kode_kriteria }}</td>
-                <td>{{ $criterion->nama_kriteria }}</td>
-                <td>{{ $criterion->bobot }}</td>
-                <td>{{ $criterion->jenis }}</td>
+                <td>{{ $data_kriteria->kode_kriteria }}</td>
+                <td>{{ $data_kriteria->nama_kriteria }}</td>
+                <td>{{ $data_kriteria->bobot_kriteria }}</td>
+                <td>{{ $data_kriteria->jenis_kriteria }}</td>
                 <td>
-                    <a href="{{ route('criteria.edit', $criterion->id) }}" class="btn btn-warning">Edit</a>
-                    <form action="{{ route('criteria.destroy', $criterion->id) }}" method="POST" style="display:inline;">
+                    <a href="{{ route('criteria.edit', $data_kriteria->id) }}" class="btn btn-warning">Edit</a>
+                    <form action="{{ route('criteria.destroy', $data_kriteria->id) }}" method="POST" style="display:inline;">
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger">Hapus</button>

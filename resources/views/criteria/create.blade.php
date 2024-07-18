@@ -14,12 +14,12 @@
             <input type="text" class="form-control" id="nama_kriteria" name="nama_kriteria" required>
         </div>
         <div class="mb-3">
-            <label for="bobot" class="form-label">Bobot</label>
-            <input type="number" step="0.001" class="form-control" id="bobot" name="bobot" required>
+            <label for="bobot_kriteria" class="form-label">Bobot</label>
+            <input type="number" step="0.001" class="form-control" id="bobot_kriteria" name="bobot_kriteria" required>
         </div>
         <div class="mb-3">
-            <label for="jenis" class="form-label">Jenis</label>
-            <select class="form-control" id="jenis" name="jenis" required>
+            <label for="jenis_kriteria" class="form-label">Jenis</label>
+            <select class="form-control" id="jenis_kriteria" name="jenis_kriteria" required>
                 <option value="Cost">Cost</option>
                 <option value="Benefit">Benefit</option>
             </select>
