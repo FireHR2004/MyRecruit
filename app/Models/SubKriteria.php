@@ -10,10 +10,13 @@ class SubKriteria extends Model
     use HasFactory;
 
     protected $table = 'sub_kriteria';
-    protected $fillable = ['kode_kriteria', 'nama_sub_kriteria', 'nilai'];
+    protected $fillable = [
+        'kriteria_id',
+        'nama_sub_kriteria',
+        'nilai_sub_kriteria',
+    ];
 
-    public function kriteria()
-    {
-        return $this->belongsTo(Kriteria::class, 'kode_kriteria', 'kode_kriteria');
+    public function kriteria() {
+        return $this->belongsTo(Kriteria::class);
     }
 }

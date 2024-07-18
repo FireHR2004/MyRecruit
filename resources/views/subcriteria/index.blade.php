@@ -36,7 +36,7 @@
                         @endforeach
                     </tbody>
                 </table>
-                <a href="{{ route('subcriteria.create') }}" class="btn btn-success">Tambah Data</a>
+                <a href="{{ route('subcriteria.create', ['criteria_id' => $criterion->id]) }}" class="btn btn-success">Tambah Data</a>
             </div>
         </div>
     @endforeach
