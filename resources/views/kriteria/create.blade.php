@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <h1>Tambah Kriteria</h1>
-    <form action="{{ route('criteria.store') }}" method="POST">
+    <form action="{{ route('kriteria.store') }}" method="POST">
         @csrf
         <div class="mb-3">
             <label for="kode_kriteria" class="form-label">Kode Kriteria</label>

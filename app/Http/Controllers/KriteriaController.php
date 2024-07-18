@@ -28,11 +28,11 @@ class KriteriaController extends Controller
         return redirect()->route('kriteria.index');
     }
 
-    public function edit(Kriteria $kriteria) {
-        return view('kriteria.edit', compact('kriteria'));
+    public function edit(Kriteria $kriterium) {
+        return view('kriteria.edit', compact('kriterium'));
     }
 
-    public function update(Request $request, Kriteria $kriteria) {
+    public function update(Request $request, Kriteria $kriterium) {
         $request->validate([
             'kode_kriteria' => 'required',
             'nama_kriteria' => 'required',
@@ -40,12 +40,12 @@ class KriteriaController extends Controller
             'jenis_kriteria' => 'required|in:Cost,Benefit',
         ]);
 
-        $kriteria->update($request->all());
+        $kriterium->update($request->all());
         return redirect()->route('kriteria.index');
     }
 
-    public function destroy(Kriteria $kriteria) {
-        $kriteria->delete();
+    public function destroy(Kriteria $kriterium) {
+        $kriterium->delete();
         return redirect()->route('kriteria.index');
     }
 }

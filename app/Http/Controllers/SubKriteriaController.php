@@ -10,13 +10,14 @@ class SubKriteriaController extends Controller
 {
     public function index() {
         $subKriteria = SubKriteria::with('kriteria')->get();
-        return view('sub_kriteria.index', compact('subKriteria'));
+        return view('subkriteria.index', compact('subKriteria'));
     }
 
-    public function create()
+    public function create(Request $request)
     {
         $kriteria = Kriteria::all();
-        return view('sub_kriteria.create', compact('kriteria'));
+        $selectedKriteria = $request->input('kriteria_id');
+        return view('subkriteria.create', compact('kriteria', 'selectedKriteria'));
     }
 
     public function store(Request $request)
@@ -28,13 +29,13 @@ class SubKriteriaController extends Controller
         ]);
 
         SubKriteria::create($request->all());
-        return redirect()->route('sub_kriteria.index');
+        return redirect()->route('subkriteria.index');
     }
 
     public function edit(SubKriteria $subKriteria)
     {
         $kriteria = Kriteria::all();
-        return view('sub_kriteria.edit', compact('subKriteria', 'kriteria'));
+        return view('subkriteria.edit', compact('subKriteria', 'kriteria'));
     }
 
     public function update(Request $request, SubKriteria $subKriteria){
@@ -45,11 +46,11 @@ class SubKriteriaController extends Controller
         ]);
 
         $subKriteria->update($request->all());
-        return redirect()->route('sub_kriteria.index');
+        return redirect()->route('subkriteria.index');
     }
 
     public function destroy(SubKriteria $subKriteria) {
         $subKriteria->delete();
-        return redirect()->route('sub_kriteria.index');
+        return redirect()->route('subkriteria.index');
     }
 }

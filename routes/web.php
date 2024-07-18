@@ -16,6 +16,6 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::resource('kriteria', KriteriaController::class);
-Route::resource('sub_kriteria', SubKriteriaController::class);
+Route::resource('subkriteria', SubKriteriaController::class);
 Route::resource('alternatif', AlternatifController::class);
 Route::resource('penilaian', PenilaianController::class);

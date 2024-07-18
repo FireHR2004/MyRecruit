@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <h1>Data Kriteria</h1>
-    <a href="{{ route('criteria.create') }}" class="btn btn-primary">Tambah Data</a>
+    <a href="{{ route('kriteria.create') }}" class="btn btn-primary">Tambah Data</a>
     <table class="table mt-3">
         <thead>
             <tr>
@@ -24,8 +24,8 @@
                 <td>{{ $data_kriteria->bobot_kriteria }}</td>
                 <td>{{ $data_kriteria->jenis_kriteria }}</td>
                 <td>
-                    <a href="{{ route('criteria.edit', $data_kriteria->id) }}" class="btn btn-warning">Edit</a>
-                    <form action="{{ route('criteria.destroy', $data_kriteria->id) }}" method="POST" style="display:inline;">
+                    <a href="{{ route('kriteria.edit', $data_kriteria->id) }}" class="btn btn-warning">Edit</a>
+                    <form action="{{ route('kriteria.destroy', $data_kriteria->id) }}" method="POST" style="display:inline;">
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger">Hapus</button>

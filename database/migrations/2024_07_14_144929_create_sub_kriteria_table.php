@@ -13,10 +13,12 @@ return new class extends Migration
     {
         Schema::create('sub_kriteria', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('kriteria_id')->constrained()->onDelete('cascade');
+            $table->unsignedBigInteger('kriteria_id');
             $table->string('nama_sub_kriteria');
             $table->integer('nilai_sub_kriteria');
             $table->timestamps();
+
+            $table->foreign('kriteria_id')->references('id')->on('kriteria')->onDelete('cascade');
         });
     }
 
