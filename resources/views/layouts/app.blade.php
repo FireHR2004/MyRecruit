@@ -78,13 +78,7 @@
                 <div class="dropdown">
                     <ul class="nav nav-pills flex-column mb-auto">
                         <li>
-                            <a href="/user" class="nav-link d-flex align-items-center gap-2 mt-4" aria-current="page">
-                                @include('icons/user-group')
-                                User Management
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="nav-link d-flex align-items-center gap-2 mt-4" aria-current="page">
+                            <a href="/profile" class="nav-link d-flex align-items-center gap-2 mt-4" aria-current="page">
                                 @include('icons/user')
                                 Profile
                             </a>

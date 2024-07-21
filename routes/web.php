@@ -15,7 +15,9 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/user', [App\Http\Controllers\UserController::class, 'index'])->name('user');
+Route::get('/profile', function () {
+    return view('profile');
+});
 Route::resource('kriteria', KriteriaController::class);
 Route::resource('subkriteria', SubKriteriaController::class);
 Route::resource('alternatif', AlternatifController::class);
