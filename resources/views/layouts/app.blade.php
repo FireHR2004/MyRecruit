@@ -25,40 +25,52 @@
                 <a href="/home" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
                     <span class="fs-4">MyRecruit</span>
                 </a>
+                <hr>
                 <ul class="nav nav-pills flex-column mb-auto">
                     <li class="nav-item">
-                        <a href="/home  " class="nav-link d-flex align-items-center gap-2 text-white active mt-4"
-                            aria-current="page">
-                            @include('icons/home')
-                            Home
+                        <a href="/home  " class="nav-link d-flex align-items-center gap-2  mt-4" aria-current="page">
+                            @include('icons/dashboard')
+                            Dashboard
+                        </a>
+                    </li>
+                    <hr>
+                    <li>
+                        <h6>Master Data</h6>
+                    </li>
+                    <li>
+                        <a href="/kriteria" class="nav-link d-flex align-items-center gap-2 mt-4" aria-current="page">
+                            @include('icons/box')
+                            Kriteria
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link d-flex align-items-center gap-2 text-white mt-4"
-                            aria-current="page">
-                            @include('icons/home')
-                            Home
+                        <a href="/subkriteria" class="nav-link d-flex align-items-center gap-2 mt-4" aria-current="page">
+                            @include('icons/boxes')
+                            Sub Kriteria
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link d-flex align-items-center gap-2 text-white mt-4"
-                            aria-current="page">
-                            @include('icons/home')
-                            Home
+                        <a href="#" class="nav-link d-flex align-items-center gap-2 mt-4" aria-current="page">
+                            @include('icons/user-group')
+                            Alternatif
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link d-flex align-items-center gap-2 text-white mt-4"
-                            aria-current="page">
-                            @include('icons/home')
-                            Home
+                        <a href="#" class="nav-link d-flex align-items-center gap-2 mt-4" aria-current="page">
+                            @include('icons/square-pen')
+                            Scoring
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link d-flex align-items-center gap-2 text-white mt-4"
-                            aria-current="page">
-                            @include('icons/home')
-                            Home
+                        <a href="#" class="nav-link d-flex align-items-center gap-2 mt-4" aria-current="page">
+                            @include('icons/calculator')
+                            Perhitungan
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link d-flex align-items-center gap-2 mt-4" aria-current="page">
+                            @include('icons/chart')
+                            Result
                         </a>
                     </li>
                 </ul>
@@ -66,15 +78,13 @@
                 <div class="dropdown">
                     <ul class="nav nav-pills flex-column mb-auto">
                         <li>
-                            <a href="#" class="nav-link d-flex align-items-center gap-2 text-white mt-4"
-                                aria-current="page">
+                            <a href="/user" class="nav-link d-flex align-items-center gap-2 mt-4" aria-current="page">
                                 @include('icons/user-group')
                                 User Management
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="nav-link d-flex align-items-center gap-2 text-white mt-4"
-                                aria-current="page">
+                            <a href="#" class="nav-link d-flex align-items-center gap-2 mt-4" aria-current="page">
                                 @include('icons/user')
                                 Profile
                             </a>
@@ -152,7 +162,7 @@
                                                 <use xlink:href="#bootstrap"></use>
                                             </svg>
                                         </a>
-                                        <span class="mb-3 mb-md-0 text-body-secondary">© 2024 Company, Inc</span>
+                                        <span class="mb-3 mb-md-0 text-body-secondary">© 2024 Pengabdi Bipol</span>
                                     </div>
 
                                     <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">

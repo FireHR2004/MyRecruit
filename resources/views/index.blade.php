@@ -40,7 +40,7 @@
                     <h6>2207411000</h6>
                 </div>
                 <div class="px-3 text-center">
-                    <img src="{{ asset('image/Fathir.png') }}" alt="" width="350">
+                    <img src="{{ asset('image/Bryan.png') }}" alt="" width="350">
                     <h3>Bryan</h3>
                     <h6>2207411000</h6>
                 </div>
