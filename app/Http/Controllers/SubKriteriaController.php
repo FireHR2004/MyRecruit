@@ -8,9 +8,11 @@ use App\Models\Kriteria;
 
 class SubKriteriaController extends Controller
 {
-    public function index() {
+    public function index()
+    {
+        $kriteria = Kriteria::all();
         $subKriteria = SubKriteria::with('kriteria')->get();
-        return view('subkriteria.index', compact('subKriteria'));
+        return view('subkriteria.index', compact('kriteria', 'subKriteria'));
     }
 
     public function create(Request $request)
@@ -32,25 +34,27 @@ class SubKriteriaController extends Controller
         return redirect()->route('subkriteria.index');
     }
 
-    public function edit(SubKriteria $subKriteria)
+    public function edit(SubKriteria $subkriterium)
     {
         $kriteria = Kriteria::all();
-        return view('subkriteria.edit', compact('subKriteria', 'kriteria'));
+        return view('subkriteria.edit', compact('subkriterium', 'kriteria'));
     }
 
-    public function update(Request $request, SubKriteria $subKriteria){
+    public function update(Request $request, SubKriteria $subkriterium)
+    {
         $request->validate([
             'kriteria_id' => 'required|exists:kriteria,id',
             'nama_sub_kriteria' => 'required',
             'nilai_sub_kriteria' => 'required|integer',
         ]);
 
-        $subKriteria->update($request->all());
+        $subkriterium->update($request->all());
         return redirect()->route('subkriteria.index');
     }
 
-    public function destroy(SubKriteria $subKriteria) {
-        $subKriteria->delete();
+    public function destroy(SubKriteria $subkriterium)
+    {
+        $subkriterium->delete();
         return redirect()->route('subkriteria.index');
     }
 }
