@@ -35,7 +35,7 @@
                     </li>
                     <hr>
                     <li>
-                        <h6>Master Data</h6>
+                        <h6 style="color: white;">Master Data</h6>
                     </li>
                     <li>
                         <a href="/kriteria" class="nav-link d-flex align-items-center gap-2 mt-4" aria-current="page">
@@ -50,7 +50,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link d-flex align-items-center gap-2 mt-4" aria-current="page">
+                        <a href="/alternatif" class="nav-link d-flex align-items-center gap-2 mt-4" aria-current="page">
                             @include('icons/user-group')
                             Alternatif
                         </a>

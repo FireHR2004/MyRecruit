@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-        <h1>Data Sub Kriteria</h1>
+        <h1 style="color: black;">Data Sub Kriteria</h1>
         @foreach ($kriteria as $kriterium)
             <div class="card mb-3">
                 <div class="card-header my-2">
