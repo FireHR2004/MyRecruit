@@ -17,4 +17,9 @@ class Alternatif extends Model
     {
         return $this->hasMany(Penilaian::class);
     }
+
+    public function scorings()
+    {
+        return $this->hasMany(Scoring::class);
+    }
 }

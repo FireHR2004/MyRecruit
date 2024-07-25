@@ -56,19 +56,19 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link d-flex align-items-center gap-2 mt-4" aria-current="page">
+                        <a href="/scoring" class="nav-link d-flex align-items-center gap-2 mt-4" aria-current="page">
                             @include('icons/square-pen')
                             Scoring
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link d-flex align-items-center gap-2 mt-4" aria-current="page">
+                        <a href="/perhitungan" class="nav-link d-flex align-items-center gap-2 mt-4" aria-current="page">
                             @include('icons/calculator')
                             Perhitungan
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link d-flex align-items-center gap-2 mt-4" aria-current="page">
+                        <a href="/result" class="nav-link d-flex align-items-center gap-2 mt-4" aria-current="page">
                             @include('icons/chart')
                             Result
                         </a>
