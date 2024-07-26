@@ -4,19 +4,21 @@
     <div class="container">
         <h1>Hasil Perhitungan</h1>
         <br>
-        <!-- Display the Average Score table -->
+        <!-- Display the Average Score table with Rank -->
         <table class="table table-bordered">
             <thead>
                 <tr>
                     <th>Alternatif</th>
                     <th>Average Score</th>
+                    <th>Rank</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach ($averageScores as $alternatif_id => $averageScore)
+                @foreach ($rankedScores as $rankedScore)
                     <tr>
-                        <td>{{ $alternatifs->find($alternatif_id)->nama_alternatif }}</td>
-                        <td>{{ number_format($averageScore, 2) }}</td>
+                        <td>{{ $rankedScore['alternatif']->nama_alternatif }}</td>
+                        <td>{{ number_format($rankedScore['averageScore'], 2) }}</td>
+                        <td>{{ $rankedScore['rank'] }}</td>
                     </tr>
                 @endforeach
             </tbody>

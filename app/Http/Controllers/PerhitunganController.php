@@ -149,6 +149,17 @@ class PerhitunganController extends Controller
             $averageScores[$alternatifId] = $averageScore;
         }
 
-        return view('result.index', compact('scorings', 'kriteria', 'alternatifs', 'kriteriaAverage', 'spTotals', 'maxTotalSP', 'npTotals', 'maxTotalNP', 'averageScores'));
+        arsort($averageScores);
+        $rankedScores = [];
+        $rank = 1;
+        foreach ($averageScores as $alternatifId => $averageScore) {
+            $rankedScores[] = [
+                'alternatif' => $alternatifs->find($alternatifId),
+                'averageScore' => $averageScore,
+                'rank' => $rank++
+            ];
+        }
+
+        return view('result.index', compact('scorings', 'kriteria', 'alternatifs', 'kriteriaAverage', 'spTotals', 'maxTotalSP', 'npTotals', 'maxTotalNP', 'averageScores', 'rankedScores'));
     }
 }
