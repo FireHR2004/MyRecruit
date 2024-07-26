@@ -10,8 +10,8 @@ class Scoring extends Model
     use HasFactory;
 
     protected $fillable = ['alternatif_id', 'kriteria_id', 'sub_kriteria_id'];
-    
-    protected $table = 'scorings';
+
+    protected $table = 'scoring';
 
     public function alternatif()
     {
